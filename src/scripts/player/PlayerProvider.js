@@ -1,2 +1,6 @@
-//export fetchPlayers
-//add eventListener that adds player to API
+// export fetchPlayers - gets player data from api
+
+// sendPlayers - adds player data to api
+
+// export getPlayer - gets player data from applicationState
+
