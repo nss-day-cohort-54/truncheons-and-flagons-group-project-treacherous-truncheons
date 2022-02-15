@@ -1,17 +1,33 @@
 {
-    "players": [
-        {
-            "id":1, "fullname":"Joe Bob", "teamId":1 
-        }
-    ],
-    "teams": [
-        {
-            "id":1, "teamName":"Mongooses"
-        }
-    ],
-    "scores": [
-        {
-            "id":1, "gameScore":4, "teamId":1, "timeStamp": 1644376786060
-        }
-    ]
+  "players": [
+    {
+      "id": 1,
+      "fullname": "Joe Bob",
+      "teamId": 1
+    },
+    {
+      "fullName": "Billy Joel",
+      "teamId": 1,
+      "id": 2
+    },
+    {
+      "fullName": "Billy Joel",
+      "teamId": 1,
+      "id": 3
+    }
+  ],
+  "teams": [
+    {
+      "id": 1,
+      "teamName": "Mongooses"
+    }
+  ],
+  "scores": [
+    {
+      "id": 1,
+      "gameScore": 4,
+      "teamId": 1,
+      "timeStamp": 1644376786060
+    }
+  ]
 }

@@ -1,5 +1,6 @@
 // import fetches, Truncheons function
 // import { applicationState } from "./dataAccess.js";
+import { fetchPlayers } from "./player/PlayerProvider.js";
 import { fetchScores } from "./score/ScoreProvider.js";
 import { fetchTeams } from "./team/TeamProvider.js";
 import { TruncheonsFlagons } from "./Truncheons.js";
@@ -8,7 +9,7 @@ const mainContainer = document.querySelector("#container")
 
 const renderAll = () => {
 //invokes fetches
-    const fetchArray = [ fetchScores(), fetchTeams() ]
+    const fetchArray = [ fetchScores(), fetchTeams(), fetchPlayers() ]
     return Promise.all(fetchArray)
             .then(() => {
                 // renders html

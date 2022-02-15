@@ -1,5 +1,5 @@
 // import teamDropdown
-import { teamDropdown } from "../TeamDropDown.js"
+//import { teamDropdown } from "../TeamDropDown.js"
 // import PlayerCount
 import { sendPlayers } from "./PlayerProvider.js"
 import { PlayerCount} from "./PlayerCount.js"
@@ -13,9 +13,9 @@ export const PlayerForm = () => {
     //saves imports as variables
     //formated team list
     let teamList =
-        `<select name="teams"><option name="teams" value="0">Please select a team...</option>`
+        `<select name="teams"><option name="teams" value="0">Please select a team...</option><option name="teams" value="1">Team 1</option>`
 
-    teamList += `${teamDropdown}`
+    //teamList += `${teamDropdown()}`
     teamList += `<select>`
 
     let html = `
@@ -75,3 +75,6 @@ document.addEventListener(
         }
     }
 )
+
+
+//look into saving text input as state

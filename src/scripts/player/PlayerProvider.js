@@ -22,7 +22,7 @@ export const sendPlayers = (playerInput) => {
         body: JSON.stringify(playerInput)
 
     }
-    return fetch(`${API}/scores`, fetchOptions)
+    return fetch(`${API}/players`, fetchOptions)
     .then(response => response.json())
 
 }
@@ -30,5 +30,10 @@ export const sendPlayers = (playerInput) => {
 // export getPlayer - gets player data from applicationState
 export const getPlayers = () => {
     return applicationState.players.map(player => ({...player}))
+}
+
+//function to reset application.playerTeam
+export const resetPlayerTeam = () => {
+    return applicationState.playerTeam = null
 }
 
