@@ -20,7 +20,11 @@ export const sendPlayers = (playerInput) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(playerInput)
+
     }
+    return fetch(`${API}/scores`, fetchOptions)
+    .then(response => response.json())
+
 }
 
 // export getPlayer - gets player data from applicationState

@@ -1,7 +1,8 @@
 // import teamDropdown
 import { teamDropdown } from "../TeamDropDown.js"
 // import PlayerCount
-import { PlayerCount, sendPlayers } from "./PlayerCount.js"
+import { sendPlayers } from "./PlayerProvider.js"
+import { PlayerCount} from "./PlayerCount.js"
 //import applicationState
 import { applicationState } from "../dataAccess.js"
 import { setPlayerTeam } from "./PlayerSelectedTeam.js"
@@ -14,7 +15,7 @@ export const PlayerForm = () => {
     let teamList =
         `<select name="teams"><option name="teams" value="0">Please select a team...</option>`
 
-    teamList += teamDropdown
+    teamList += `${teamDropdown}`
     teamList += `<select>`
 
     let html = `
