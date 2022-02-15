@@ -2,11 +2,10 @@
 import { getTeams } from "./TeamProvider.js"
 import { getPlayers} from "../player/PlayerProvider.js"
 
-const teams = getTeams()
-const players = getPlayers()
 
 //export function that adds options for a dropdown menu that contains all teams
 export const allTeams = () => {
+    const teams = getTeams()
     //set default html string as empty
     let html = `<option value="" disabled selected hidden>Choose a team...</option>`
     //iterate over teams and add <option> html string to our starter html string
@@ -19,6 +18,8 @@ export const allTeams = () => {
 
 //export function that adds options for a dropdown menu that contains only teams with 3 players
 export const fullTeams = () => {
+    const teams = getTeams()
+    const players = getPlayers()
     //set default html string as empty
     let html = ""
     //iterate over teams
@@ -42,10 +43,11 @@ export const gameTeamOptions = () => {
     //define empty html string variable
     let parentHTML = ""
     //for loop where max of i is 2
-    for (let index = 0; index >= 2; index++) {
+    for (let index = 0; index <= 2; index++) {
         //create label and select tags
-        html += `<label for="team-names">Choose team ${index + 1}:</label>
+        parentHTML += `<label for="team-names">Team ${index + 1}:</label>
         <select name="team-names" id="team-names">
+        <option value="" disabled selected hidden>Choose a team...</option>
         ${fullTeams()}
         </select>`
         }

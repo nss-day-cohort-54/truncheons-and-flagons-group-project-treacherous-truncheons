@@ -15,7 +15,7 @@ const renderAll = () => {
                 // renders html
                 // test with just raw applicationState
                 // mainContainer.innerHTML = JSON.stringify(applicationState)
-                mainContainer.innerHTML = gameTeamOptions()
+                //mainContainer.innerHTML = gameTeamOptions()
             })
 }
 
