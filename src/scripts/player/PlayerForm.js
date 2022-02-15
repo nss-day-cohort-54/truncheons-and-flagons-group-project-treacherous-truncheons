@@ -61,16 +61,16 @@ document.addEventListener(
             const playerTeam = applicationState.playerTeam
             // invoke playerCount with the id of whichever team was clicked on as the parameter
             const playerCount = PlayerCount(playerTeam)
-            if (playerCount < 3) {
+            if (playerCount && playerCount < 3) {
                 const playerData = {
                     fullName: name,
                     teamId: playerTeam
                 }
                 sendPlayers(playerData)
-                applicationState.playerTeam = null
+                .then(() => setPlayerTeam(null))
             } else {
                 window.alert("Selected team is full. Please select another.")
-                applicationState.playerTeam = null
+                setPlayerTeam(null)
             }
         }
     }
