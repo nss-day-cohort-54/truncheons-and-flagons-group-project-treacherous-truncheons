@@ -1,13 +1,22 @@
-//fetch teams, players, scores from the API
-//define API
-//application state obj
+
 //include rounds in application state
-//export copies of teams, players, scores 
+
 //send data back to database
 
-//applicationState ={}
-//export fetchTeams
-//export fetchPlayers
-//export fetchScores
+/* // temporary copy of api
+export const applicationState = {
+    // players:
+    // teams:
+    // scores:
+    // gameState: {
+        // team1Id: score,
+        // team2Id: score,
+        // team3Id: score,
+        // roundNumber: integer
+    }
+}
+*/
+
+// define API
 
 
