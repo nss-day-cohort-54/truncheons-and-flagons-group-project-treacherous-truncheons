@@ -23,6 +23,7 @@ export const PlayerForm = () => {
             <input type="text" name="playerName" class="input" >
             ${teamList}
         </div>
+        <button class="button" id="submitPlayer">Add Player to the Team</button>
         `
     // data from form is:
     // define html string that has a label and input field
