@@ -4,4 +4,4 @@
 
 // export getScores - gets team score data from applicationState
 
-// add eventListener that invokes function to sendScore to api
+// export setScore(teamId, score) - add input to that teams respective value in gameState
