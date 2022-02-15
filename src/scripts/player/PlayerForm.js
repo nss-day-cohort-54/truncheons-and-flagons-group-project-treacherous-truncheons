@@ -1,9 +1,9 @@
 // import teamDropdown
-import { teamDropdown } from "./TeamDropDown.js"
+import { teamDropdown } from "../TeamDropDown.js"
 // import PlayerCount
 import { PlayerCount, sendPlayers } from "./PlayerCount.js"
 //import applicationState
-import { applicationState } from "./dataAccess.js"
+import { applicationState } from "../dataAccess.js"
 import { setPlayerTeam } from "./PlayerSelectedTeam.js"
 
 

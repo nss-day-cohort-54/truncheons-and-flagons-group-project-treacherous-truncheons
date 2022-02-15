@@ -1,4 +1,4 @@
-import {API, applicationState } from "./dataAccess.js"
+import {API, applicationState } from "../dataAccess.js"
 
 
 // export fetchPlayers - gets player data from api

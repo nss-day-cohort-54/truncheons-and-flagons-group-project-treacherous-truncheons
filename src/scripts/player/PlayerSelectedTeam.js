@@ -1,4 +1,4 @@
-import {applicationState} from "./dataAccess.js"
+import {applicationState} from "../dataAccess.js"
 
 export const setPlayerTeam = (teamId) => {
     applicationState.playerTeam = teamId
