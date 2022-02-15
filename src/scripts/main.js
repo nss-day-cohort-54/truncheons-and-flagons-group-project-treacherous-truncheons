@@ -12,7 +12,7 @@ const renderAll = () => {
     return Promise.all(fetchArray)
             .then(() => {
                 // renders html
-                TruncheonsFlagons()
+                mainContainer.innerHTML = `${TruncheonsFlagons()}`
                 // test with just raw applicationState
                 // mainContainer.innerHTML = JSON.stringify(applicationState)
             })
