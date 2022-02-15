@@ -1,7 +1,6 @@
-//import scores, teams from database
-//display leaderboard
-//define a function thats iterates over teams
-//then iterate over scores to find those with matching teamIds
-//then add matchingscore.gamescore
-//interpolate a string of html that displays team
+//import getTeams, totalScore, import playerCount
+
+//define function that iterates over teams
+    //interpolate string for each team that displays team name, totalScore, and playerCount
+    //return html
 

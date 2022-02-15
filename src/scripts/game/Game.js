@@ -1,3 +1,5 @@
+//import teamdropdown function, TeamScoreInput function
+
 /*
     Responsibility: Generate HTML for the game component
 */
@@ -6,17 +8,21 @@
     // get gameState
     // if gameState has roundNumber property
         // if roundNumber = 0
-            // generate three teamDropdown 
+            // invoke dropdown menu function(line 16)
         // else
-            // generate Round # html
-            // generate the save round score button
+            // invoke TeamScoreInput function
+    // else
+        // generate the start game button
 
+// add click eventlistener to the start game button
+    //dispatch statechanged event
 // add eventlistener to the teamDropdown
 
-// eventlistener on save round score button
+// click eventlistener on save round score button
     // each round add each team score
         // to the applicationState.gameState[teamId] 
         // increment roundNumber
     // check if roundNumber >= 3
         // invokes sendScore
         // reset gameState
+    //dispatch statechanged event
