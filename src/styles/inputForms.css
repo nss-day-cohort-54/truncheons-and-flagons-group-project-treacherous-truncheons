@@ -1,0 +1,30 @@
+.button {
+    color: whitesmoke;
+    background-color: navy;
+    border-radius: 25px;
+  padding: 20px;
+}
+
+.newPlayer, .newTeam {
+    border: 5px solid navy;
+    padding: 20px  40px 20px 40px;
+    align-content: center;
+}
+
+.newPlayer {
+    border-top:0px;
+}
+.inputForms {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height:auto
+}
+#inputField {
+    width:100%;
+    padding:0px
+}
+.input, .button, select{
+    width:100%;
+    overflow: hidden;
+}
