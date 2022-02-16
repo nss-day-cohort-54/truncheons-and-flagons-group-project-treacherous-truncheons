@@ -4,7 +4,22 @@
       "id": 1,
       "fullname": "Joe Bob",
       "teamId": 1
-    }
+    },
+    {
+      "id": 2,
+      "fullname": "Joe Bob",
+      "teamId": 2
+    },
+    {
+      "fullName": "Billy Joel",
+      "teamId": 1,
+      "id": 3
+    },
+    {
+        "fullName": "Hank Hill",
+        "teamId": 3,
+        "id": 4
+    }  
   ],
   "teams": [
     {
@@ -14,6 +29,10 @@
     {
       "teamName": "Shepard",
       "id": 2
+    },
+    {
+      "teamName": "Cobras",
+      "id": 3
     }
   ],
   "scores": [
@@ -22,6 +41,18 @@
       "gameScore": 4,
       "teamId": 1,
       "timeStamp": 1644376786060
-    }
+    },
+    {
+      "id": 2,
+      "gameScore": 6,
+      "teamId": 2,
+      "timeStamp": 1644376786060
+    },
+    {
+        "id": 3,
+        "gameScore": 5,
+        "teamId": 3,
+        "timeStamp": 1644376786060
+      }
   ]
 }

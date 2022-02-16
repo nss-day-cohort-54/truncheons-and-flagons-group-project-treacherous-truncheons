@@ -3,6 +3,7 @@
 import { TeamForm } from "./team/TeamForm.js";
 //import { Leaderboard } from "./Leaderboard.js";
 import { PlayerForm } from "./player/PlayerForm.js";
+import { Leaderboard } from "./Leaderboard.js";
 
 
 //export function that interpolates entire html string
@@ -31,12 +32,12 @@ export const TruncheonsFlagons = () => {
     */
 
     // add leaderboard component
-    /* uncomment when Leaderboard ready
+    // uncomment when Leaderboard ready
     htmlString += `<article class="leaderboard">
                         ${Leaderboard()}
                     </article>
     `
-    */
+    
 
     //return html string
     return htmlString
