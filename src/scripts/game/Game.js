@@ -12,7 +12,7 @@ import { TeamScoreInput } from "./TeamScoreInput.js";
 export const Game = () => {
     // get gameState
     const gameState = getGameState()
-    let gameHTML = ""
+    let gameHTML = "<h1>Game</h2>"
     // if gameState has roundNumber property
     if("roundNumber" in gameState) {
         // if roundNumber = 0
