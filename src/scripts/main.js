@@ -2,6 +2,7 @@
 // import { applicationState } from "./dataAccess.js";
 import { fetchPlayers } from "./player/PlayerProvider.js";
 import { fetchScores } from "./score/ScoreProvider.js";
+import { gameTeamOptions } from "./team/TeamDropdown.js";
 import { fetchTeams } from "./team/TeamProvider.js";
 import { TruncheonsFlagons } from "./Truncheons.js";
 
@@ -16,6 +17,7 @@ const renderAll = () => {
                 mainContainer.innerHTML = `${TruncheonsFlagons()}`
                 // test with just raw applicationState
                 // mainContainer.innerHTML = JSON.stringify(applicationState)
+                //mainContainer.innerHTML = gameTeamOptions()
             })
 }
 

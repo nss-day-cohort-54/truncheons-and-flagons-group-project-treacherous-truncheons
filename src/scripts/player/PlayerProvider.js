@@ -37,3 +37,18 @@ export const resetPlayerTeam = () => {
     return applicationState.playerTeam = null
 }
 
+/*xport const fetchPlayers = () => {
+    return fetch(`${API}/players`)
+        .then(response => response.json())
+        .then(
+            (players) => {
+                // Store the external state in application state
+                applicationState.players = players
+            }
+        )
+}
+
+export const getPlayers = () => {
+    return applicationState.players.map(player => ({...player}))
+}
+*/
