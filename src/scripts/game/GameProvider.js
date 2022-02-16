@@ -49,10 +49,15 @@ export const addAllRoundScores = (scoreArray) => {
                 gameScore: gameState[scoreObject.teamId],
                 timestamp: Date.now()
             }
+            // add proper score object to the array to send
             scoresToSend.push(scoreToSend)
         }
+        // send all scores to the api via sendScore
+        // promise.all waits for all to resolve before resetting game and sending stateChanged event
         Promise.all(scoresToSend.map(scoreObject => sendScore(scoreObject)))
+            // reset game to empty object
             .then(() => resetGameState())
+            // dispatch stateChanged event to refresh page view
             .then(() => document.dispatchEvent(new CustomEvent("stateChanged")))
     }
 }

@@ -1,10 +1,9 @@
-import { addAllRoundScores, getGameState } from "./GameProvider.js"
+import { addAllRoundScores } from "./GameProvider.js"
 
 
 // button for saving round score
 export const RoundScoreButton = () => {
-    const buttonHTML = `<button id="saveRoundButton">Save Round Score</button>`
-    return buttonHTML
+    return `<button id="saveRoundButton">Save Round Score</button>`
 }
 
 
@@ -14,35 +13,36 @@ document.addEventListener(
     event => {
         if(event.target.id === "saveRoundButton"){
             // get array of team round scores
-            const roundScores = {}
             const scoreFields = Array.from(document.querySelectorAll("input[name^='roundScore']"))
-            // check if scores valid
+            // map to array of objects with just teamId and score
             const foundScores = scoreFields.map(score => {
+                // get teamId from the name of the select element
                 const [,teamId] = score.name.split("--")
+                // build score object
                 const scoreObject = {
                     teamId: parseInt(teamId),
-                    // check if faley to prevent NaN
+                    // check if falsy to prevent NaN input
                     score: parseInt(score.value ? score.value : 0)
                 }
                 return scoreObject
-                //parseInt(score.value)
             })
 
             // check if valid score
+            // set initial score for .reduce() method to use
             const initialScore = 0
+            // reduce returns sum of the score properties of foundScores
             const sumOfScores = foundScores.reduce(
                 (previousScore, currentScore) => previousScore + currentScore.score
                 , initialScore
             )
-            
-            // check if third round
-            const gameState = getGameState()
 
+            // check if sum of the scores is less than or equal to 9
             if(sumOfScores <= 9) {
-                // addroundscore function
+                // addAllRoundScores function
                 // expects and array of objects with .teamId and .score properties
                 addAllRoundScores(foundScores)
             } else {
+                // if sumofScores is more than 9 send alert and do no change state
                 alert("Sum of scores must be less than 9.")
             }
         }
