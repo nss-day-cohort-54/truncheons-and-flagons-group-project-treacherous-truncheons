@@ -1,5 +1,7 @@
 //import teamdropdown function, TeamScoreInput function
+import { gameTeamOptions } from "../team/TeamDropdown.js";
 import { getGameState } from "./GameProvider.js";
+import { RoundScoreButton } from "./RoundScoreButton.js";
 import { StartGameButton } from "./StartGameButton.js";
 import { TeamScoreInput } from "./TeamScoreInput.js";
 /*

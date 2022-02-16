@@ -1,9 +1,9 @@
 // import teamDropdown
 import { allTeams } from "../team/TeamDropdown.js"
 // import PlayerCount
-import { resetPlayerTeam, sendPlayers } from "./PlayerProvider.js"
+import { sendPlayers } from "./PlayerProvider.js"
 import { PlayerCount } from "./PlayerCount.js"
-import { setPlayerTeam } from "./PlayerSelectedTeam.js"
+
 
 
 
