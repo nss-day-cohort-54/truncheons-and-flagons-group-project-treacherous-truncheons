@@ -16,9 +16,9 @@
       "teamName": "Mongooses"
     },
     {
-        "id": 2,
-        "teamName": "Cobras"
-      }
+      "teamName": "Shepard",
+      "id": 2
+    }
   ],
   "scores": [
     {
