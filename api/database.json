@@ -9,15 +9,11 @@
   "teams": [
     {
       "id": 1,
-      "teamName": "Money Mongooses"
+      "teamName": "Mongooses"
     },
     {
-      "id": 2,
-      "teamName": "Nightly Knights"
-    },
-    {
-      "id": 3,
-      "teamName": "Gobstopper Goblins"
+      "teamName": "Shepard",
+      "id": 2
     }
   ],
   "scores": [
