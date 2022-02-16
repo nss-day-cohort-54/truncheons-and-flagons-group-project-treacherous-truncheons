@@ -102,8 +102,6 @@ const teamSelectionEventListener = () => {
                 // change state if threeTeamsSelected and teamsReady
                 if(teamsReady) {
                     setCurrentTeams(foundTeamIds)
-                } else {
-                    const y = "y"
                 }
             }
         }

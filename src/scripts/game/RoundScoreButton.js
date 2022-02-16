@@ -38,12 +38,12 @@ document.addEventListener(
             // check if third round
             const gameState = getGameState()
 
-            if(sumOfScores === 3) {
+            if(sumOfScores <= 9) {
                 // addroundscore function
                 // expects and array of objects with .teamId and .score properties
                 addAllRoundScores(foundScores)
             } else {
-                alert("Scores must add up to 3.")
+                alert("Sum of scores must be less than 9.")
             }
         }
     }

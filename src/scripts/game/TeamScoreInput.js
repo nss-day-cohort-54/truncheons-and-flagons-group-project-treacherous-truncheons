@@ -17,7 +17,7 @@ export const TeamScoreInput = () => {
             //and include an input field
             let teamString = `<div class="roundScoreInput">
             <label class="roundScoreLabel" for="roundScore--${team.id}">${team.teamName}</label>
-            <input type="number" name="roundScore--${team.id}" id="${team.id}" />
+            <input type="number" name="roundScore--${team.id}" id="${team.id}" min=0 max=6 />
             </div>
 `
 
