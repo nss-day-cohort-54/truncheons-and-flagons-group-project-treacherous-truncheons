@@ -4,16 +4,6 @@
       "id": 1,
       "fullname": "Joe Bob",
       "teamId": 1
-    },
-    {
-      "fullName": "Billy Joel",
-      "teamId": 1,
-      "id": 2
-    },
-    {
-      "fullName": "Billy Joel",
-      "teamId": 1,
-      "id": 3
     }
   ],
   "teams": [
