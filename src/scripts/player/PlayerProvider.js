@@ -4,7 +4,7 @@ import { API, applicationState } from "../dataAccess.js"
 
 // export getPlayer - gets player data from applicationState
 
-/*export const fetchPlayers = () => {
+/*xport const fetchPlayers = () => {
     return fetch(`${API}/players`)
         .then(response => response.json())
         .then(

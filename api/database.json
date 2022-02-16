@@ -2,6 +2,12 @@
     "players": [
         {
             "id":1, "fullname":"Joe Bob", "teamId":1 
+        },
+        {
+            "id":2, "fullname":"Joe Bob", "teamId":1 
+        },
+        {
+            "id":3, "fullname":"Joe Bob", "teamId":1 
         }
     ],
     "teams": [
