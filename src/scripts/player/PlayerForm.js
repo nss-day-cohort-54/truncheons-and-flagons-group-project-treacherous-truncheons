@@ -1,9 +1,9 @@
 // import teamDropdown
 //import { allTeams } from "../TeamDropDown.js"
 // import PlayerCount
-import { resetPlayerTeam, sendPlayers } from "./PlayerProvider.js"
+import { sendPlayers } from "./PlayerProvider.js"
 import { PlayerCount } from "./PlayerCount.js"
-import { setPlayerTeam } from "./PlayerSelectedTeam.js"
+
 
 
 // function that generates html for the player form
@@ -60,8 +60,8 @@ document.addEventListener(
             const playerTeam = parseInt(document.querySelector("select[name='teams']").value)
             // invoke playerCount with the id of whichever team was clicked on as the parameter
             const playerCount = PlayerCount(playerTeam)
-            if (playerCount === 0) {
-                window.alert("Please select a team for your player.")
+            if (!name || playerCount === 0) {
+                window.alert("Please select a name and team for your player.")
             } else if (playerCount >= 3) {
                 window.alert("Selected team is full. Please select another.")
             } else {
