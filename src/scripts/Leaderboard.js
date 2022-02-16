@@ -8,7 +8,7 @@ export const Leaderboard = () => {
     //return html
 
     return `<table>
-                    <tr>
+                    <tr class="headers">
                         <th>Name</th>
                         <th>Players</th>
                         <th>Score</th>
