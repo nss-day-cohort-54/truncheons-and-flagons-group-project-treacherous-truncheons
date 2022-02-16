@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-{
-    "players": [
-        {
-            "id":1, "fullname":"Joe Bob", "teamId":1 
-        },
-        {
-            "id":2, "fullname":"Joe Bob", "teamId":1 
-        },
-        {
-            "id":3, "fullname":"Joe Bob", "teamId":1 
-        }
-    ],
-    "teams": [
-        {
-            "id":1, "teamName":"Mongooses"
-        }
-    ],
-    "scores": [
-        {
-            "id":1, "gameScore":4, "teamId":1, "timeStamp": 1644376786060
-        }
-    ]
-=======
 {
   "players": [
     {
@@ -33,7 +9,15 @@
   "teams": [
     {
       "id": 1,
-      "teamName": "Mongooses"
+      "teamName": "Money Mongooses"
+    },
+    {
+      "id": 2,
+      "teamName": "Nightly Knights"
+    },
+    {
+      "id": 3,
+      "teamName": "Gobstopper Goblins"
     }
   ],
   "scores": [
@@ -44,5 +28,4 @@
       "timeStamp": 1644376786060
     }
   ]
->>>>>>> main
 }
