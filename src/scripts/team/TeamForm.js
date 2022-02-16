@@ -20,16 +20,16 @@ document.addEventListener(
     "click",
     (clickEvent) => {
         if (clickEvent.target.id === "submitTeam") {
-            const teamName = document.querySelector("input[name=teamName]").value
+            const currentTeamName = document.querySelector("input[name=teamName]").value
             const teams = getTeams()
-            const matchTeam = teams.find(team => team.teamName === teamName)
-            if (teamName === "" ) {
+            const matchTeam = teams.find(team => team.teamName === currentTeamName)
+            if (currentTeamName === "" ) {
                 window.alert("Please enter a team name.") 
-                } else if (matchTeam.teamName === teamName) {
+                } else if (matchTeam != undefined) {
                     window.alert("This team name already exists, please create a new one.")
                 } else {
                     const teamData ={
-                        teamName: teamName
+                        teamName: currentTeamName
                     }
                     sendTeam(teamData)
                         .then(() => document.dispatchEvent (new CustomEvent("stateChanged")))
