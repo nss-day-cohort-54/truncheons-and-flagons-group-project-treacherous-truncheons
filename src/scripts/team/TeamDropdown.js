@@ -51,59 +51,58 @@ export const gameTeamOptions = () => {
     }
 
     // add event listener
-    teamSelectionEventListener()
+    //teamSelectionEventListener()
 
     //return final html string
     return parentHTML
 
 }
 
-const teamSelectionEventListener = () => {
-    document.addEventListener(
-        "change",
-        event => {
-            if (event.target.id.startsWith("team-selector")){
-                // add all selections to an array
-                const foundSelections = Array.from(document.querySelectorAll("select[name='team-names']"))
 
-                // make into array of just team.values as int's
-                const foundTeamIds = foundSelections.map(team => parseInt(team.value))
+document.addEventListener(
+    "change",
+    event => {
+        if (event.target.id.startsWith("team-selector")){
+            // add all selections to an array
+            const foundSelections = Array.from(document.querySelectorAll("select[name='team-names']"))
 
-                // check team uniqueness
-                const searchedTeams = {}
-                // set default to true
-                let teamsReady = true
-                // iterate over foundTeamIds
-                for (const team of foundTeamIds) {
-                    // check team which should be the teamId
-                    if(team){
-                        // if team is not NaN
-                        // check if team is in searchedTeams already
-                        if(team in searchedTeams){
-                            // if team is in searchedTeams object
-                            // team selections are not unique
-                            // set teamsReady to false and break for loop
-                            teamsReady = false
-                            break
-                        } else {
-                            // if team is not in searchedTeams object
-                            // add as a property to the searchedTeams object
-                            searchedTeams[team] = ""
-                        }
-                    } else {
-                        // if team is falsey (NaN)
-                        // then no team is selected for at least one of the select inputs
-                        // set uniquess to false and break for loop
+            // make into array of just team.values as int's
+            const foundTeamIds = foundSelections.map(team => parseInt(team.value))
+
+            // check team uniqueness
+            const searchedTeams = {}
+            // set default to true
+            let teamsReady = true
+            // iterate over foundTeamIds
+            for (const team of foundTeamIds) {
+                // check team which should be the teamId
+                if(team){
+                    // if team is not NaN
+                    // check if team is in searchedTeams already
+                    if(team in searchedTeams){
+                        // if team is in searchedTeams object
+                        // team selections are not unique
+                        // set teamsReady to false and break for loop
                         teamsReady = false
                         break
+                    } else {
+                        // if team is not in searchedTeams object
+                        // add as a property to the searchedTeams object
+                        searchedTeams[team] = ""
                     }
-                }
-                
-                // change state if threeTeamsSelected and teamsReady
-                if(teamsReady) {
-                    setCurrentTeams(foundTeamIds)
+                } else {
+                    // if team is falsey (NaN)
+                    // then no team is selected for at least one of the select inputs
+                    // set uniquess to false and break for loop
+                    teamsReady = false
+                    break
                 }
             }
+            
+            // change state if threeTeamsSelected and teamsReady
+            if(teamsReady) {
+                setCurrentTeams(foundTeamIds)
+            }
         }
-    )
-}
+    }
+)

@@ -15,13 +15,13 @@ export const getGameState = () => {
 export const startGame = () => {
     applicationState.gameState.roundNumber = 0
 }
-
+let count = 0
 // function that sets teams in applicationState.gameState
 export const setCurrentTeams = (teamArray) => {
     for (const teamId of teamArray) {
         applicationState.gameState[teamId] = 0
     }
-    applicationState.gameState.roundNumber++
+    applicationState.gameState.roundNumber = 1
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
@@ -41,7 +41,6 @@ export const addAllRoundScores = (scoreArray) => {
         document.dispatchEvent(new CustomEvent("stateChanged"))
     } else {
         // iterate over the current teams
-        const gameState = getGameState()
         const scoresToSend = []
         for (const scoreObject of scoreArray) {
             // build score object for each score in gameState
