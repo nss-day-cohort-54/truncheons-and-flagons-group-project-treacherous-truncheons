@@ -17,7 +17,7 @@ export const PlayerForm = () => {
     teamList += `${allTeams()}`
     teamList += `<select>`
 
-    let html = `
+    let html = `<h2>New Player</h2>
         <div id="inputField">
             <label class="label" for="playerName"></label>
             <input type="text" name="playerName" class="input" >

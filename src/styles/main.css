@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 @import url("./inputForms.css");
+@import url("./leaderBoard.css");
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
 /*Typography
 --------------------------------------------------------------*/
@@ -24,3 +26,11 @@ h1,h2,h3,h4,h5,h6 {
     justify-content: space-between;
 }
 
+h2 {
+  text-align: center;
+}
+
+h1 {
+  font-family: "MedievalSharp", Arial, Helvetica, sans-serif;
+  font-size: 64px;
+}

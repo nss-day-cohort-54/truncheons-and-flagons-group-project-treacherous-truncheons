@@ -1,0 +1,27 @@
+.leaderboard {
+    font-size: large;
+    border: 2px solid navy;
+    
+}
+.leaderboardHeaders {
+    border-bottom: 1px solid navy;
+}
+td {
+    padding-top:3px;
+}
+td, th {
+    padding-left:10px;
+    text-align: left;
+    
+}
+table {
+    border-collapse: collapse;
+  }
+
+.score, .playerCount {
+    text-align: center;
+}
+
+
+
+
