@@ -3,18 +3,33 @@ import { getTeams } from "../team/TeamProvider.js";
 import { totalScore } from "./totalScore.js";
 import { PlayerCount } from "../player/PlayerCount.js";
 
-//define function that iterates over teams
-export const LeaderBoard = () => {
+//sort all totalScores so the leaderboard is displayed in the right order
+const sortTotalScores = () => {
     const teams = getTeams()
-    let html = `<tr>`
+    //define an empty array
+    const scoreArr = []
 
-    //interpolate string for each team that displays team name, totalScore, and playerCount
     for (const team of teams) {
-        html += `<td>${team.teamName}</td>
-                 <td>${PlayerCount(team.id)}</td>
-                 <td>${totalScore(team.id)}</td>`
+        //for each team add their totalScore to that array
+        scoreArr.push(totalScore(team.id))
     }
-    html += `</tr>`
+
+    const sortedScores = scoreArr.sort(( score1, score2) => score2 - score1)
+    return sortedScores
+}
+
+
+//define function that iterates over teams
+export const TeamRows = () => {
+    const teams = getTeams()
+    let html = ""
+        
+        //interpolate string for each team that displays team name, totalScore, and playerCount
+        html += `<tr>
+                    <td>${team.teamName}</td>
+                    <td>${PlayerCount(team.id)}</td>
+                    <td>${totalScore(team.id)}</td>
+                </tr>`
     //return html
     
     return html

@@ -4,13 +4,21 @@
       "id": 1,
       "fullname": "Joe Bob",
       "teamId": 1
-    }
+    },{
+        "id": 2,
+        "fullname": "Joe Bob",
+        "teamId": 2
+      }
   ],
   "teams": [
     {
       "id": 1,
       "teamName": "Mongooses"
-    }
+    },
+    {
+        "id": 2,
+        "teamName": "Cobras"
+      }
   ],
   "scores": [
     {
@@ -18,6 +26,12 @@
       "gameScore": 4,
       "teamId": 1,
       "timeStamp": 1644376786060
-    }
+    },
+    {
+        "id": 2,
+        "gameScore": 6,
+        "teamId": 2,
+        "timeStamp": 1644376786060
+      }
   ]
 }
