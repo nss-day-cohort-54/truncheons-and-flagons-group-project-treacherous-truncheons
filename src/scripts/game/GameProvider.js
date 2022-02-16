@@ -41,10 +41,18 @@ export const addAllRoundScores = (scoreArray) => {
         document.dispatchEvent(new CustomEvent("stateChanged"))
     } else {
         // iterate over the current teams
+        const gameState = getGameState()
+        const scoresToSend = []
         for (const scoreObject of scoreArray) {
-            scoreObject.timestamp = Date.now()
+            // build score object for each score in gameState
+            const scoreToSend = {
+                teamId: scoreObject.teamId,
+                gameScore: gameState[scoreObject.teamId],
+                timestamp: Date.now()
+            }
+            scoresToSend.push(scoreToSend)
         }
-        Promise.all(scoreArray.map(scoreObject => sendScore(scoreObject)))
+        Promise.all(scoresToSend.map(scoreObject => sendScore(scoreObject)))
             .then(() => resetGameState())
             .then(() => document.dispatchEvent(new CustomEvent("stateChanged")))
     }

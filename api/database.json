@@ -80,24 +80,6 @@
       "gameScore": 4,
       "teamId": 1,
       "timeStamp": 1644376786060
-    },
-    {
-      "teamId": 1,
-      "score": 3,
-      "timestamp": 1645042484946,
-      "id": 2
-    },
-    {
-      "teamId": 3,
-      "score": 0,
-      "timestamp": 1645042484947,
-      "id": 3
-    },
-    {
-      "teamId": 2,
-      "score": 0,
-      "timestamp": 1645042484947,
-      "id": 4
     }
   ]
 }
