@@ -2,9 +2,11 @@
     text-align: center;
     padding: 0em 1em;
     font-size: large;
+    width: 1fr;
+    min-width: 30%;
 }
 .game {
-    padding: 0em 5em;
+    padding: 0em 3em;
 }
 .scoreInputs {
     justify-content: space-between;
@@ -16,4 +18,8 @@
 }
 .roundScoreInput {
     margin-top: .5em;
+}
+
+.currentGameStats {
+    text-align: center;
 }

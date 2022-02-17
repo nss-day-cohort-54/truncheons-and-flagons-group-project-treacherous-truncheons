@@ -164,42 +164,7 @@
       "gameScore": 4,
       "teamId": 1,
       "timeStamp": 1644376786060
-    },
-    {
-      "teamId": 1,
-      "gameScore": 3,
-      "timestamp": 1645111327855,
-      "id": 2
-    },
-    {
-      "teamId": 3,
-      "gameScore": 3,
-      "timestamp": 1645111327855,
-      "id": 3
-    },
-    {
-      "teamId": 2,
-      "gameScore": 3,
-      "timestamp": 1645111327855,
-      "id": 4
-    },
-    {
-      "teamId": 1,
-      "gameScore": 27,
-      "timestamp": 1645111353625,
-      "id": 5
-    },
-    {
-      "teamId": 3,
-      "gameScore": 0,
-      "timestamp": 1645111353625,
-      "id": 6
-    },
-    {
-      "teamId": 2,
-      "gameScore": 0,
-      "timestamp": 1645111353625,
-      "id": 7
     }
+    
   ]
 }

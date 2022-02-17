@@ -1,7 +1,8 @@
 .leaderboard {
     font-size: large;
     border: 2px solid navy;
-    
+    width: 1fr;
+    min-width: 30%;
 }
 .leaderboardHeaders {
     border-bottom: 1px solid navy;
@@ -28,7 +29,7 @@ table {
 }
 
 .teamRows {
-    height:20em;
+    height:30em;
     overflow-y:scroll;
     overflow-x: hidden;
     
@@ -38,7 +39,7 @@ table {
 thead, tbody tr {
     display:table;
     table-layout:fixed;
-    width: 21em;
+    width: 100%;
 }
 
 .leaderboardTeam {
