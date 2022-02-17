@@ -1,6 +1,5 @@
 //import Game, playerForm, teamForm, leaderboard html functions
 import { Game } from "./game/Game.js";
-import { TeamForm } from "./team/TeamForm.js";
 //import { Leaderboard } from "./Leaderboard.js";
 import { TeamForm } from "./team/TeamForm.js";
 import { PlayerForm } from "./player/PlayerForm.js";
