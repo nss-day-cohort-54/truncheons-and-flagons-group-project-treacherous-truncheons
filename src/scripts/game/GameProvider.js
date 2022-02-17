@@ -1,21 +1,21 @@
 import { applicationState } from "../dataAccess.js";
 import { sendScore, setScore } from "../score/ScoreProvider.js";
 
-
 // export function that makes copy of applicationState.gameState
 export const getGameState = () => {
     return JSON.parse(JSON.stringify(applicationState.gameState))
 }
 
-// function that sets initial game state
-/* initial game state should be
-    no teams selected
-    round: 0
+/*
+    function that sets initial game state
+        initial game state should be
+        no teams selected
+        round: 0
 */
 export const startGame = () => {
     applicationState.gameState.roundNumber = 0
 }
-let count = 0
+
 // function that sets teams in applicationState.gameState
 export const setCurrentTeams = (teamArray) => {
     for (const teamId of teamArray) {
@@ -26,7 +26,7 @@ export const setCurrentTeams = (teamArray) => {
 }
 
 // function adds scores to applicationState.gameState
-
+// if round 3, restarts game
 export const addAllRoundScores = (scoreArray) => {
     // add scores to gameState
     for (const scoreObject of scoreArray) {

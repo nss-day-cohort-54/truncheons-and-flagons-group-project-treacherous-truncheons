@@ -1,8 +1,6 @@
-//import getTeams, getPlayers
 import { getTeams } from "./TeamProvider.js"
 import { PlayerCount } from "../player/PlayerCount.js"
 import { setCurrentTeams } from "../game/GameProvider.js"
-
 
 //export function that adds options for a dropdown menu that contains all teams
 export const allTeams = () => {
@@ -49,9 +47,6 @@ export const gameTeamOptions = () => {
         ${fullTeams()}
         </select>`
     }
-
-    // add event listener
-    //teamSelectionEventListener()
 
     //return final html string
     return parentHTML

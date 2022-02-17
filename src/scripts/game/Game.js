@@ -1,13 +1,11 @@
-
-import { CurrentGameStats } from "./CurrentGameStats.js";
-import { GameManager } from "./GameManager.js";
-
-
 /*
     Responsibility: Generate HTML for the game component
 */
 
-// function that generates HTML
+import { CurrentGameStats } from "./CurrentGameStats.js";
+import { GameManager } from "./GameManager.js";
+
+// function that generates HTML from gameManager() and CurrentGameStats()
 export const Game = () => {
     let gameHTML = "<h1>Truncheons & Flagons</h1>"
 

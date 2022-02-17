@@ -11,8 +11,7 @@ export const CurrentGameStats = () => {
                 <tr>
                     <th>Team</th>
                     <th>Score</th>
-                </tr>
-            `
+                </tr>`
 
         for (const property in gameState) {
             if (property != "roundNumber") {
