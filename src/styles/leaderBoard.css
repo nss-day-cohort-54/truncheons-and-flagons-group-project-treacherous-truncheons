@@ -1,0 +1,47 @@
+.leaderboard {
+    font-size: large;
+    border: 2px solid navy;
+    width: 1fr;
+    min-width: 30%;
+}
+.leaderboardHeaders {
+    border-bottom: 1px solid navy;
+}
+td {
+    padding-top:3px;
+    border-bottom: 1px solid navy;
+    padding-left:10px;
+    text-align: left;
+    
+}
+th{
+    text-align: center;
+
+}
+table {
+    border-collapse: collapse;
+  }
+
+.score, .playerCount {
+    text-align: center;
+
+
+}
+
+.teamRows {
+    height:30em;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    
+
+}
+
+thead, tbody tr {
+    display:table;
+    table-layout:fixed;
+    width: 100%;
+}
+
+.leaderboardTeam {
+    word-wrap: break-word;
+}

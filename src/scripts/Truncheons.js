@@ -12,18 +12,14 @@ export const TruncheonsFlagons = () => {
 
     // add new team component
 
-    htmlString += `<article class="newTeam">
+    htmlString += `<article class="inputForms">
+                <article class="newTeam">
                         ${TeamForm()}
-                    </article>
-    `
-
-
-    // add new player component
-
-    htmlString += `<article class="newPlayer">
-        ${PlayerForm()}
-        </article>
-        `
+                </article>
+                <article class="newPlayer">
+                        ${PlayerForm()}
+                </article>
+                    </article>`
 
 
 

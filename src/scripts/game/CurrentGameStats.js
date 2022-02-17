@@ -7,7 +7,7 @@ export const CurrentGameStats = () => {
     const teams = getTeams()
     let html = ""
     if (gameState.roundNumber >= 1) {
-        html = `<table>
+        html = `<table >
                 <tr>
                     <th>Team</th>
                     <th>Score</th>
@@ -21,7 +21,7 @@ export const CurrentGameStats = () => {
                 })
                 html += `<tr>
                             <td>${matchingTeam.teamName}</td>
-                            <td>${gameState[property]}</td>
+                            <td class="score">${gameState[property]}</td>
                         </tr>`
             }
         }

@@ -1,0 +1,37 @@
+button {
+    font-family: "Comfortaa", Arial, sans-serif;
+    color: whitesmoke;
+    background-color: navy;
+    border-radius: 25px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.newPlayer, .newTeam {
+    border: 2px solid navy;
+    padding: 20px  40px 20px 40px;
+    text-align: center;
+    margin: 2em 0em
+}
+
+
+.inputForms {
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    font-size: large;
+    flex-basis: 30%;
+    padding-bottom: 2em;
+    width: 1fr;
+    min-width: 30%;
+
+}
+#inputField {
+    flex-direction: column;
+    padding:0px
+    
+}
+.input, select{
+    width:100%;
+    overflow: hidden;
+}

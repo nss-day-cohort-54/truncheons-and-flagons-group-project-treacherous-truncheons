@@ -6,9 +6,10 @@ import { getTeams } from "./TeamProvider.js";
 
 //export function that makes a create team form
 export const TeamForm = () => {
-    let html = `<div id="inputField">
+    let html = `<h2>New Team</h2>
+    <div id="inputField">
                     <label class="label" for="teamName"></label>
-                    <input type="text" name="teamName" class="input">
+                    <input type="text" maxlength="40" name="teamName" class="input">
                 </div>
                 <button class="button" id="submitTeam">Create Team</button>`
                 // return html string containing an input field for new teams and a Save team button
