@@ -50,7 +50,7 @@ document.addEventListener(
             const playerTeam = parseInt(document.querySelector("select[name='teams']").value)
             // invoke playerCount with the id of whichever team was clicked on as the parameter
             const playerCount = PlayerCount(playerTeam)
-            if (playerTeam === 0) {
+            if (!playerTeam) {
                 window.alert("Please select a team for your player.")
             } else if (playerCount >= 3) {
                 window.alert("Selected team is full. Please select another.")
