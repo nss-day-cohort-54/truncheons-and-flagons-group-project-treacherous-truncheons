@@ -36,7 +36,6 @@ export const getScores = () => {
 }
 
 // export setScore(teamId, score) - add input to that teams respective value in gameState
-
 export const setScore = (teamId, score) => {
     applicationState.gameState[teamId] += score
 }

@@ -59,36 +59,6 @@
       "fullName": "Larry",
       "teamId": 4,
       "id": 12
-    },
-    {
-      "fullName": "larry",
-      "teamId": 5,
-      "id": 13
-    },
-    {
-      "fullName": "Larry",
-      "teamId": 6,
-      "id": 14
-    },
-    {
-      "fullName": "Larry",
-      "teamId": 7,
-      "id": 15
-    },
-    {
-      "fullName": "Dennis",
-      "teamId": 8,
-      "id": 16
-    },
-    {
-      "fullName": "Dee",
-      "teamId": 8,
-      "id": 17
-    },
-    {
-      "fullName": "Frank",
-      "teamId": 8,
-      "id": 18
     }
   ],
   "teams": [
@@ -97,7 +67,7 @@
       "teamName": "Mongooses"
     },
     {
-      "teamName": "Shepard",
+      "teamName": "Shepards",
       "id": 2
     },
     {

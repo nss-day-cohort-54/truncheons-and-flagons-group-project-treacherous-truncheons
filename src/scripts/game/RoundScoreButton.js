@@ -1,13 +1,11 @@
 import { addAllRoundScores } from "./GameProvider.js"
 
-
 // button for saving round score
 export const RoundScoreButton = () => {
     return `<button id="saveRoundButton">Save Round Score</button>`
 }
 
-
-// eventlistener for the round score button
+// eventlistener for the saveRoundButton
 document.addEventListener(
     "click",
     event => {
@@ -39,7 +37,7 @@ document.addEventListener(
             // check if negative numbers inputted
             const negatives = foundScores.find(foundScore => foundScore.score < 0)
 
-            // check if sum of the scores is less than or equal to 9
+            // check if no negatives and sum of the scores is less than or equal to 9
             if(!negatives && sumOfScores <= 9) {
                 // addAllRoundScores function
                 // expects and array of objects with .teamId and .score properties
@@ -51,6 +49,3 @@ document.addEventListener(
         }
     }
 )
-// sends the scores to the gamestate
-
-// on third round sends total scores from gamestate to the api database as a score object
