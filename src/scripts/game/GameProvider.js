@@ -1,5 +1,6 @@
 import { applicationState } from "../dataAccess.js";
 import { sendScore, setScore } from "../score/ScoreProvider.js";
+import { getTeams } from "../team/TeamProvider.js";
 
 
 // export function that makes copy of applicationState.gameState
@@ -42,7 +43,11 @@ export const addAllRoundScores = (scoreArray) => {
     } else {
         // iterate over the current teams
         const scoresToSend = []
+        //create game winner obj
+        let winner = {gameScore:0}
         for (const scoreObject of scoreArray) {
+            
+            
             // build score object for each score in gameState
             const scoreToSend = {
                 teamId: scoreObject.teamId,
@@ -51,16 +56,30 @@ export const addAllRoundScores = (scoreArray) => {
             }
             // add proper score object to the array to send
             scoresToSend.push(scoreToSend)
+            //check gameState[scoreObject.teamId] for highest score
+            // if > winner.score replace obj
+            if (scoreToSend.gameScore > winner.gameScore) {
+                winner = scoreToSend
+
+            }
         }
         // send all scores to the api via sendScore
         // promise.all waits for all to resolve before resetting game and sending stateChanged event
         Promise.all(scoresToSend.map(scoreObject => sendScore(scoreObject)))
+            //window alert to show user which team won the game
+            .then(() => {
+                const teams = getTeams()
+                const winningTeam = teams.find(team => team.id === winner.teamId)
+
+                window.alert(`${winningTeam.teamName} has won with ${winner.gameScore} points!`)})
             // reset game to empty object
             .then(() => resetGameState())
             // dispatch stateChanged event to refresh page view
             .then(() => document.dispatchEvent(new CustomEvent("stateChanged")))
     }
 }
+
+
 
 // function that resets gameState to empty object at end of game
 export const resetGameState = () => {
