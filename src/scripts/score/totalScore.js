@@ -17,10 +17,3 @@ export const totalScore = (teamId) => {
     return totalScore
 }
 
-/*
-    For testing
-*/
-// export const totalScoreTest = () => {
-//     const testScore = totalScore(1)
-//     return testScore === 4
-// }
