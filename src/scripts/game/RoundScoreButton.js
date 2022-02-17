@@ -36,14 +36,17 @@ document.addEventListener(
                 , initialScore
             )
 
+            // check if negative numbers inputted
+            const negatives = foundScores.find(foundScore => foundScore.score < 0)
+
             // check if sum of the scores is less than or equal to 9
-            if(sumOfScores <= 9) {
+            if(!negatives && sumOfScores <= 9) {
                 // addAllRoundScores function
                 // expects and array of objects with .teamId and .score properties
                 addAllRoundScores(foundScores)
             } else {
                 // if sumofScores is more than 9 send alert and do no change state
-                alert("Sum of scores must be less than 9.")
+                alert("Scoring rules violated!\nScores must be 0 or greater.\nSum of scores must be less than 9.")
             }
         }
     }
