@@ -8,11 +8,14 @@
 }
 td {
     padding-top:3px;
-}
-td, th {
+    border-bottom: 1px solid navy;
     padding-left:10px;
     text-align: left;
     
+}
+th{
+    text-align: center;
+
 }
 table {
     border-collapse: collapse;
@@ -20,8 +23,24 @@ table {
 
 .score, .playerCount {
     text-align: center;
+
+
 }
 
+.teamRows {
+    height:20em;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    
 
+}
 
+thead, tbody tr {
+    display:table;
+    table-layout:fixed;
+    width: 21em;
+}
 
+.leaderboardTeam {
+    word-wrap: break-word;
+}

@@ -20,7 +20,7 @@ export const TeamRows = () => {
         for (const team of sortedTeams)
         //interpolate string for each team that displays team name, totalScore, and playerCount
         html += `<tr class="leaderboardRows">
-                    <td>${team.teamName}</td>
+                    <td class="leaderboardTeam">${team.teamName}</td>
                     <td class="playerCount">${PlayerCount(team.id)}</td>
                     <td class="score">${totalScore(team.id)}</td>
                 </tr>`

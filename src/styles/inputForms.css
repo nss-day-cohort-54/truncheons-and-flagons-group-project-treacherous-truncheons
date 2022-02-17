@@ -1,15 +1,16 @@
-.button {
+button {
+    font-family: "Comfortaa", Arial, sans-serif;
     color: whitesmoke;
     background-color: navy;
     border-radius: 25px;
-  padding: 20px;
+  padding: 10px;
   margin-top: 5px;
 }
 
 .newPlayer, .newTeam {
     border: 2px solid navy;
     padding: 20px  40px 20px 40px;
-    align-content: center;
+    text-align: center;
 }
 
 .newPlayer {
@@ -18,12 +19,13 @@
 .inputForms {
     display: flex;
     flex-direction: column;
-    width: 30%;
     height:auto;
     font-size: large;
+    flex-basis: 30%;
+    padding-bottom: 2em;
 }
 #inputField {
-    width:100%;
+    flex-direction: column;
     padding:0px
 }
 .input, select{

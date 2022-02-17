@@ -2,11 +2,11 @@
 @import url("./inputForms.css");
 @import url("./leaderBoard.css");
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+@import url("./gameArea.css");
 
 /*Typography
 --------------------------------------------------------------*/
 body,
-button,
 input,
 select,
 textarea {
@@ -24,6 +24,19 @@ h1,h2,h3,h4,h5,h6 {
 #container{
     display:flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    
+}
+
+@media screen and (max-width:1000px) {
+  #container {
+    flex-direction: column;
+    
+  }
+  .gameArea {
+    order: -1;
+    padding-bottom: 2em;
+  }
 }
 
 h2 {
@@ -32,5 +45,6 @@ h2 {
 
 h1 {
   font-family: "MedievalSharp", Arial, Helvetica, sans-serif;
-  font-size: 64px;
+  font-size: 3em;
+  margin-top: .5em;
 }

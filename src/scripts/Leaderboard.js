@@ -9,12 +9,26 @@ export const Leaderboard = () => {
 
     return `<h2>Leaderboard</h2>
     <table id="leaderboardTable">
-                    <tr class="leaderboardHeaders">
-                        <th class"leaderboardHeader">Name</th>
-                        <th class"leaderboardHeader">Players</th>
-                        <th class"leaderboardHeader">Score</th>
-                    </tr>
-                    ${TeamRows()}
+                    <thead>
+                        <tr class="leaderboardHeaders">
+                            <th scope="col" class="leaderboardHeader">Name</th>
+                            <th scope="col" class="leaderboardHeaderPlayer">Players</th>
+                            <th scope="col" class="leaderboardHeaderScore">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        <tr>
+                        <td colspan="3">
+                        <div class="teamRows">
+                        <table>
+                        <tbody>
+                        ${TeamRows()}
+                        </tbody>
+                        </table>
+                        </div>
+                        </td>
+                        </tr>
+                    </tbody>
                    </table>`
 
 }

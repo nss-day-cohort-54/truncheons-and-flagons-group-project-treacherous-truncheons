@@ -20,7 +20,7 @@ export const PlayerForm = () => {
     let html = `<h2>New Player</h2>
         <div id="inputField">
             <label class="label" for="playerName"></label>
-            <input type="text" name="playerName" class="input" >
+            <input type="text" maxlength="40" name="playerName" class="input" >
             ${teamList}
         </div>
         <button class="button" id="submitPlayer">Add Player to the Team</button>

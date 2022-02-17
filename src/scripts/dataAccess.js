@@ -14,13 +14,13 @@ export const applicationState = {
     // teams:
     // scores:
     gameState: {
-        // // team1Id: score,
-        // 1: 0,
-        // // team2Id: score,
-        // 2: 0,
-        // // team3Id: score,
-        // 3: 0,
-        // roundNumber: 1
+        // team1Id: score,
+        1: 0,
+        // team2Id: score,
+        2: 0,
+        // team3Id: score,
+        3: 0,
+        roundNumber: 1
     }
 }
 
