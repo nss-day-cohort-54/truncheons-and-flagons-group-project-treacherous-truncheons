@@ -13,11 +13,15 @@ export const applicationState = {
     // players:
     // teams:
     // scores:
-    gameState: {}
-        // team1Id: score,
-        // team2Id: score,
-        // team3Id: score,
-        // roundNumber: integer
+    gameState: {
+        // // team1Id: score,
+        // 1: 0,
+        // // team2Id: score,
+        // 2: 0,
+        // // team3Id: score,
+        // 3: 0,
+        // roundNumber: 1
+    }
 }
 
 // define API
