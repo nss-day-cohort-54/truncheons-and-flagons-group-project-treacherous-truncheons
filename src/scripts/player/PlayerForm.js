@@ -54,6 +54,8 @@ document.addEventListener(
                 window.alert("Please select a team for your player.")
             } else if (playerCount >= 3) {
                 window.alert("Selected team is full. Please select another.")
+            } else if (!name) {
+                window.alert("Please enter a player name.")
             } else {
                 const playerData = {
                     fullName: name,
