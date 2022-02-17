@@ -39,5 +39,4 @@ export const getScores = () => {
 
 export const setScore = (teamId, score) => {
     applicationState.gameState[teamId] += score
-    return ""
 }
