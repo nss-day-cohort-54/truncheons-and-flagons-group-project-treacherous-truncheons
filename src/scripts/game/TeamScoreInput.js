@@ -1,5 +1,3 @@
-//import getState, getTeams, setScore
-
 import { getGameState } from "./GameProvider.js";
 import { getTeams } from "../team/TeamProvider.js";
 
@@ -11,20 +9,20 @@ export const TeamScoreInput = () => {
     let htmlString = "<div class='scoreInputs'>"
     //iterate over teams
     for (const team of allTeams) {
-        //find team.id === teamId from state
+        // check if team.id is a property in state - means a team is in the current game
         if(team.id in gameState) {
-            //interpolate an html string that creates {.findFunction.name} as the label tag
-            //and include an input field
+            // interpolate an html string that creates the label from teamName
+            // and include an input field
             let teamString = `<div class="roundScoreInput">
             <label class="roundScoreLabel" for="roundScore--${team.id}">${team.teamName}</label>
             <input class="inputScore" type="number" name="roundScore--${team.id}" id="${team.id}" min=0 max=6 />
-            </div>
-`
+            </div>`
 
             //add that html string to original string
             htmlString += teamString
         }
     }
+    // close div tag
     htmlString += `</div>`
     // return entire html string
     return htmlString

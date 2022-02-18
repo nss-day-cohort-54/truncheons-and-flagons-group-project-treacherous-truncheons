@@ -32,9 +32,5 @@ export const getPlayers = () => {
     return applicationState.players.map(player => ({...player}))
 }
 
-//function to reset application.playerTeam
-export const resetPlayerTeam = () => {
-    return applicationState.playerTeam = null
-}
 
 

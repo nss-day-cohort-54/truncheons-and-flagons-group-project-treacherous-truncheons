@@ -1,17 +1,13 @@
-//import Game, playerForm, teamForm, leaderboard html functions
 import { Game } from "./game/Game.js";
-//import { Leaderboard } from "./Leaderboard.js";
 import { TeamForm } from "./team/TeamForm.js";
 import { PlayerForm } from "./player/PlayerForm.js";
 import { Leaderboard } from "./Leaderboard.js";
-
 
 //export function that interpolates entire html string
 export const TruncheonsFlagons = () => {
     let htmlString = ""
 
     // add new team component
-
     htmlString += `<article class="inputForms">
                 <article class="newTeam">
                         ${TeamForm()}
@@ -21,23 +17,16 @@ export const TruncheonsFlagons = () => {
                 </article>
                     </article>`
 
-
-
     // add game component
-    /* uncomment when Game ready */
     htmlString += `<article class="gameArea">
                         ${Game()}
-                    </article>
-    `
+                    </article>`
 
     // add leaderboard component
-    // uncomment when Leaderboard ready
     htmlString += `<article class="leaderboard">
                         ${Leaderboard()}
-                    </article>
-    `
+                    </article>`
     
-
     //return html string
     return htmlString
 }

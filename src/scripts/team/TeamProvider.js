@@ -24,7 +24,6 @@ export const sendTeam = (team) => {
         body: JSON.stringify(team)
     }
 
-
     return fetch(`${API}/teams`, fetchOptions)
         .then(response => response.json())
 }

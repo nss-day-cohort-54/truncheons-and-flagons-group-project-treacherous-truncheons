@@ -59,51 +59,6 @@
       "fullName": "Larry",
       "teamId": 4,
       "id": 12
-    },
-    {
-      "fullName": "larry",
-      "teamId": 5,
-      "id": 13
-    },
-    {
-      "fullName": "Larry",
-      "teamId": 6,
-      "id": 14
-    },
-    {
-      "fullName": "Larry",
-      "teamId": 7,
-      "id": 15
-    },
-    {
-      "fullName": "",
-      "teamId": 7,
-      "id": 16
-    },
-    {
-      "fullName": "",
-      "teamId": 7,
-      "id": 17
-    },
-    {
-      "fullName": "Frank",
-      "teamId": 8,
-      "id": 18
-    },
-    {
-      "fullName": "new",
-      "teamId": 9,
-      "id": 19
-    },
-    {
-      "fullName": "new2",
-      "teamId": 9,
-      "id": 20
-    },
-    {
-      "fullName": "new3",
-      "teamId": 9,
-      "id": 21
     }
   ],
   "teams": [
@@ -112,7 +67,7 @@
       "teamName": "Mongooses"
     },
     {
-      "teamName": "Shepard",
+      "teamName": "Shepards",
       "id": 2
     },
     {
@@ -158,106 +113,136 @@
       "id": 2
     },
     {
-      "teamId": 2,
-      "gameScore": 8,
-      "timestamp": 1645120669840,
-      "id": 3
-    },
-    {
-      "teamId": 3,
-      "gameScore": 6,
-      "timestamp": 1645120669840,
-      "id": 4
-    },
-    {
       "teamId": 1,
-      "gameScore": 7,
-      "timestamp": 1645126859129,
-      "id": 5
+      "gameScore": 3,
+      "timestamp": 1645132514212,
+      "id": 3
     },
     {
       "teamId": 2,
       "gameScore": 3,
-      "timestamp": 1645126859129,
-      "id": 6
-    },
-    {
-      "teamId": 7,
-      "gameScore": 5,
-      "timestamp": 1645126859129,
-      "id": 7
-    },
-    {
-      "teamId": 7,
-      "gameScore": 0,
-      "timestamp": 1645203941047,
-      "id": 8
-    },
-    {
-      "teamId": 2,
-      "gameScore": 0,
-      "timestamp": 1645203941047,
-      "id": 9
+      "timestamp": 1645132514212,
+      "id": 4
     },
     {
       "teamId": 1,
       "gameScore": 0,
-      "timestamp": 1645203941046,
-      "id": 10
+      "timestamp": 1645133669230,
+      "id": 6
     },
     {
       "teamId": 3,
       "gameScore": 0,
-      "timestamp": 1645204136599,
-      "id": 11
+      "timestamp": 1645133669230,
+      "id": 8
+    },
+    {
+      "teamId": 1,
+      "gameScore": 0,
+      "timestamp": 1645134037759,
+      "id": 9
+    },
+    {
+      "teamId": 3,
+      "gameScore": 0,
+      "timestamp": 1645134037760,
+      "id": 10
     },
     {
       "teamId": 2,
       "gameScore": 0,
-      "timestamp": 1645204136599,
+      "timestamp": 1645199388833,
       "id": 12
     },
     {
       "teamId": 1,
       "gameScore": 0,
-      "timestamp": 1645204136599,
+      "timestamp": 1645199388833,
       "id": 13
     },
     {
       "teamId": 3,
       "gameScore": 0,
-      "timestamp": 1645204171769,
+      "timestamp": 1645199388833,
       "id": 14
     },
     {
       "teamId": 2,
       "gameScore": 0,
-      "timestamp": 1645204171769,
+      "timestamp": 1645199418630,
       "id": 15
     },
     {
       "teamId": 1,
       "gameScore": 0,
-      "timestamp": 1645204171769,
+      "timestamp": 1645199418630,
       "id": 16
     },
     {
-      "teamId": 7,
+      "teamId": 3,
       "gameScore": 0,
-      "timestamp": 1645204194470,
+      "timestamp": 1645199418630,
       "id": 17
     },
     {
       "teamId": 3,
       "gameScore": 0,
-      "timestamp": 1645204194470,
+      "timestamp": 1645199462893,
       "id": 18
+    },
+    {
+      "teamId": 2,
+      "gameScore": 0,
+      "timestamp": 1645199462893,
+      "id": 19
     },
     {
       "teamId": 1,
       "gameScore": 0,
-      "timestamp": 1645204194470,
-      "id": 19
+      "timestamp": 1645199462893,
+      "id": 20
+    },
+    {
+      "teamId": 1,
+      "gameScore": 1,
+      "timestamp": 1645199481787,
+      "id": 21
+    },
+    {
+      "teamId": 3,
+      "gameScore": 0,
+      "timestamp": 1645199481787,
+      "id": 22
+    },
+    {
+      "teamId": 2,
+      "gameScore": 1,
+      "timestamp": 1645199481787,
+      "id": 23
+    },
+    {
+      "teamId": 1,
+      "gameScore": 0,
+      "timestamp": 1645199542484,
+      "id": 24
+    },
+    {
+      "teamId": 2,
+      "gameScore": 1,
+      "timestamp": 1645199567944,
+      "id": 25
+    },
+    {
+      "teamId": 3,
+      "gameScore": 0,
+      "timestamp": 1645199567944,
+      "id": 26
+    },
+    {
+      "teamId": 1,
+      "gameScore": 1,
+      "timestamp": 1645199567944,
+      "id": 27
     }
   ]
 }
