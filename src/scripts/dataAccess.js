@@ -25,5 +25,5 @@ export const applicationState = {
 }
 
 // define API
-export const API = "http://localhost:8088"
+export const API = "https://truncheons-api-lyrnz.ondigitalocean.app"
 
