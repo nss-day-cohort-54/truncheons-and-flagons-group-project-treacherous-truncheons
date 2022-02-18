@@ -1,4 +1,4 @@
-import { startConfetti } from "../confetti.js";
+import { startConfetti, stopConfetti } from "../confetti.js";
 import { AlertDialog } from "../AlertDialog.js";
 import { applicationState } from "../dataAccess.js";
 import { sendScore, setScore } from "../score/ScoreProvider.js";
@@ -83,17 +83,7 @@ export const addAllRoundScores = (scoreArray) => {
                 const teams = getTeams()
                 // check if more than one winner - means it's a tie
                 if (winners.length > 1) {
-                    // initialize tie string
-                    let tieString = "It is a tie between: <ul>"
-                    // iterate over winners
-                    for (const winner of winners) {
-                        // find team name of each winner
-                        const winningTeam = teams.find(team => team.id === winner.teamId)
-                        // add to string
-                        tieString += `<li>${winningTeam.teamName}</li>`
-                    }
-                    // end string with points value
-                    tieString += `</ul>... with ${winners[0].gameScore} points!`
+                    const tieString = TieString(winners)
                     // window alert of tie string
                     AlertDialog(tieString, true)
                 } else if (winners.length === 1) {
@@ -101,12 +91,42 @@ export const addAllRoundScores = (scoreArray) => {
 
                     AlertDialog(`Team "${winningTeam.teamName}" has won with ${winners[0].gameScore} points!`, true)
                 }
-                startConfetti()
-            })            
+            })
     }
 }
 
+export const TieString = (winners) => {
+    // get teams for finding team names
+    const teams = getTeams()
+    // initialize tie string
+    let tieString = "It is a tie between:"
+    const dialogContainer = document.querySelector("#dialog")
+    if (typeof dialogContainer.showModal === "function") {
 
+        tieString += "<ul>"
+        // iterate over winners
+        for (const winner of winners) {
+            // find team name of each winner
+            const winningTeam = teams.find(team => team.id === winner.teamId)
+            // add to string
+            tieString += `<li>${winningTeam.teamName}</li>`
+        }
+        // end string with points value
+        tieString += `</ul>... with ${winners[0].gameScore} points!`
+    } else {
+        tieString += "\n"
+        // iterate over winners
+        for (const winner of winners) {
+            // find team name of each winner
+            const winningTeam = teams.find(team => team.id === winner.teamId)
+            // add to string
+            tieString += `    - ${winningTeam.teamName}\n`
+        }
+        // end string with points value
+        tieString += `... with ${winners[0].gameScore} points!`
+    }
+    return tieString
+}
 
 // function that resets gameState to empty object at end of game
 export const resetGameState = () => {
