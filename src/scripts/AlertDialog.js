@@ -1,3 +1,4 @@
+import { playAudio } from "./AudioAlert.js"
 import { resetGameState } from "./game/GameProvider.js"
 
 //exports a function that accepts a string as an input
@@ -10,6 +11,7 @@ export const AlertDialog = (string, endOfGame=false) => {
         if (endOfGame === true) {
 
             dialogContainer.innerHTML += `<form method="dialog"><button id="endGameButton">Ok</button></form>`
+            playAudio()
         }else {
             dialogContainer.innerHTML += `<form method="dialog"><button id="dialogButton">Ok</button></form>`
         }

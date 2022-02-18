@@ -83,16 +83,16 @@ export const addAllRoundScores = (scoreArray) => {
                 // check if more than one winner - means it's a tie
                 if (winners.length > 1) {
                     // initialize tie string
-                    let tieString = "It is a tie between: \n"
+                    let tieString = "It is a tie between: <ul>"
                     // iterate over winners
                     for (const winner of winners) {
                         // find team name of each winner
                         const winningTeam = teams.find(team => team.id === winner.teamId)
                         // add to string
-                        tieString += `    - ${winningTeam.teamName}\n`
+                        tieString += `<li>${winningTeam.teamName}</li>`
                     }
                     // end string with points value
-                    tieString += `... with ${winners[0].gameScore} points!`
+                    tieString += `</ul>... with ${winners[0].gameScore} points!`
                     // window alert of tie string
                     AlertDialog(tieString, true)
                 } else if (winners.length === 1) {
