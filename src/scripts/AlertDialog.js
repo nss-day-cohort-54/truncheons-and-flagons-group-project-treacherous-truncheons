@@ -1,4 +1,5 @@
 import { playAudio } from "./AudioAlert.js"
+import { stopConfetti } from "./confetti.js"
 import { resetGameState } from "./game/GameProvider.js"
 
 //exports a function that accepts a string as an input
@@ -27,6 +28,7 @@ document.addEventListener(
     "click",
     clickEvent=> {
         if (clickEvent.target.id === "endGameButton"){
+            stopConfetti()
             resetGameState()
         }
     }
