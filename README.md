@@ -1,3 +1,7 @@
+
+
+
+
 # Truncheons &amp; Flagons
 
 The Truncheons & Flagons site allows users to record information for playing the game Truncheons & Flagons. Users can create new teams, assign players to teams, and record scores as games are played. The instructions for this project can be viewed [here](./instructions.md).
@@ -34,8 +38,11 @@ A user can record information about a specific game of Truncheons & Flagons. Onc
 
 The leaderboard gets the score data from the API. Teams are sorted by their all-time score, and the team name, number of players, and scores are displayed.
 
-[Insert gif here]
-<br><br>
+
+https://user-images.githubusercontent.com/96712524/154756513-e9c324b4-b05b-4cf1-8891-2ee30fa815d3.mp4
+
+<br></br>
+
 
 ## How to use this repo
 If you would like to test out the functionality of this site, here is how to download and run it on your computer.
