@@ -34,8 +34,11 @@ A user can record information about a specific game of Truncheons & Flagons. Onc
 
 The leaderboard gets the score data from the API. Teams are sorted by their all-time score, and the team name, number of players, and scores are displayed.
 
-[Insert gif here]
-<br><br>
+
+
+https://user-images.githubusercontent.com/96712524/154755818-a761c296-ec95-43c0-9662-0832f5e2b285.mp4
+<br></br>
+
 
 ## How to use this repo
 If you would like to test out the functionality of this site. Here is how to download and run it on your computer.
