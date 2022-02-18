@@ -1,3 +1,4 @@
+import { AlertDialog } from "../AlertDialog.js";
 import { applicationState } from "../dataAccess.js";
 import { sendScore, setScore } from "../score/ScoreProvider.js";
 import { getTeams } from "../team/TeamProvider.js";
@@ -93,17 +94,13 @@ export const addAllRoundScores = (scoreArray) => {
                     // end string with points value
                     tieString += `... with ${winners[0].gameScore} points!`
                     // window alert of tie string
-                    window.alert(tieString)
+                    AlertDialog(tieString, true)
                 } else if (winners.length === 1) {
                     const winningTeam = teams.find(team => team.id === winners[0].teamId)
 
-                    window.alert(`Team "${winningTeam.teamName}" has won with ${winners[0].gameScore} points!`)
+                    AlertDialog(`Team "${winningTeam.teamName}" has won with ${winners[0].gameScore} points!`, true)
                 }
-            })
-            // reset game to empty object
-            .then(() => resetGameState())
-            // dispatch stateChanged event to refresh page view
-            .then(() => document.dispatchEvent(new CustomEvent("stateChanged")))
+            })            
     }
 }
 
@@ -112,4 +109,5 @@ export const addAllRoundScores = (scoreArray) => {
 // function that resets gameState to empty object at end of game
 export const resetGameState = () => {
     applicationState.gameState = {}
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }

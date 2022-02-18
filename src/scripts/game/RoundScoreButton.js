@@ -1,3 +1,4 @@
+import { AlertDialog } from "../AlertDialog.js"
 import { addAllRoundScores } from "./GameProvider.js"
 
 // button for saving round score
@@ -44,7 +45,7 @@ document.addEventListener(
                 addAllRoundScores(foundScores)
             } else {
                 // if sumofScores is more than 9 send alert and do no change state
-                alert("Scoring rules violated!\nScores must be 0 or greater.\nSum of scores must be less than 9.")
+                AlertDialog("Scoring rules violated!\nScores must be 0 or greater.\nSum of scores must be less than 9.")
             }
         }
     }

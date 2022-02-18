@@ -1,6 +1,7 @@
 import { allTeams } from "../team/TeamDropdown.js"
 import { sendPlayers } from "./PlayerProvider.js"
 import { PlayerCount } from "./PlayerCount.js"
+import { AlertDialog } from "../AlertDialog.js"
 
 // function that generates html for the player form
 export const PlayerForm = () => {
@@ -39,13 +40,13 @@ document.addEventListener(
             
             // check if playerTeam is not valid teamId
             if (!playerTeam) {
-                window.alert("Please select a team for your player.")
+                AlertDialog("Please select a team for your player.")
             // check if team is full
             } else if (playerCount >= 3) {
-                window.alert("Selected team is full. Please select another.")
+                AlertDialog("Selected team is full. Please select another.")
             // check if player's name is not valid    
             } else if (!name) {
-                window.alert("Please enter a player name.")
+                AlertDialog("Please enter a player name.")
             // passes all checks, send data to the api database
             } else {
                 const playerData = {

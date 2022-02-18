@@ -26,7 +26,7 @@ export const TruncheonsFlagons = () => {
     htmlString += `<article class="leaderboard">
                         ${Leaderboard()}
                     </article>`
-    
+    htmlString += `<dialog id="dialog"></dialog>`
     //return html string
     return htmlString
 }
