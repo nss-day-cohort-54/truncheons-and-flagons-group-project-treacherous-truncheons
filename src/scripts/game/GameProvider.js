@@ -1,3 +1,4 @@
+import { start, stop } from "../../confetti.js";
 import { applicationState } from "../dataAccess.js";
 import { sendScore, setScore } from "../score/ScoreProvider.js";
 
@@ -55,6 +56,8 @@ export const addAllRoundScores = (scoreArray) => {
         // send all scores to the api via sendScore
         // promise.all waits for all to resolve before resetting game and sending stateChanged event
         Promise.all(scoresToSend.map(scoreObject => sendScore(scoreObject)))
+        .then(() => start())
+        .then(() => stop())
             // reset game to empty object
             .then(() => resetGameState())
             // dispatch stateChanged event to refresh page view
