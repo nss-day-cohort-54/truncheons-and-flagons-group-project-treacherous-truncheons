@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { start, stop } from "../../confetti.js";
+=======
+import { AlertDialog } from "../AlertDialog.js";
+>>>>>>> main
 import { applicationState } from "../dataAccess.js";
 import { sendScore, setScore } from "../score/ScoreProvider.js";
 import { getTeams } from "../team/TeamProvider.js";
@@ -83,28 +87,24 @@ export const addAllRoundScores = (scoreArray) => {
                 // check if more than one winner - means it's a tie
                 if (winners.length > 1) {
                     // initialize tie string
-                    let tieString = "It is a tie between: \n"
+                    let tieString = "It is a tie between: <ul>"
                     // iterate over winners
                     for (const winner of winners) {
                         // find team name of each winner
                         const winningTeam = teams.find(team => team.id === winner.teamId)
                         // add to string
-                        tieString += `    - ${winningTeam.teamName}\n`
+                        tieString += `<li>${winningTeam.teamName}</li>`
                     }
                     // end string with points value
-                    tieString += `... with ${winners[0].gameScore} points!`
+                    tieString += `</ul>... with ${winners[0].gameScore} points!`
                     // window alert of tie string
-                    window.alert(tieString)
+                    AlertDialog(tieString, true)
                 } else if (winners.length === 1) {
                     const winningTeam = teams.find(team => team.id === winners[0].teamId)
 
-                    window.alert(`Team "${winningTeam.teamName}" has won with ${winners[0].gameScore} points!`)
+                    AlertDialog(`Team "${winningTeam.teamName}" has won with ${winners[0].gameScore} points!`, true)
                 }
-            })
-            // reset game to empty object
-            .then(() => resetGameState())
-            // dispatch stateChanged event to refresh page view
-            .then(() => document.dispatchEvent(new CustomEvent("stateChanged")))
+            })            
     }
 }
 
@@ -113,4 +113,5 @@ export const addAllRoundScores = (scoreArray) => {
 // function that resets gameState to empty object at end of game
 export const resetGameState = () => {
     applicationState.gameState = {}
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }

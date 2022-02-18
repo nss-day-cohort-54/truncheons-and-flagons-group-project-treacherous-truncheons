@@ -1,5 +1,6 @@
 import { sendTeam } from "./TeamProvider.js";
 import { getTeams } from "./TeamProvider.js";
+import { AlertDialog } from "../AlertDialog.js";
 
 //export function that makes a create team form
 export const TeamForm = () => {
@@ -26,10 +27,10 @@ document.addEventListener(
             const matchTeam = teams.find(team => team.teamName === currentTeamName)
             // check if team name is not empty string
             if (currentTeamName === "") {
-                window.alert("Please enter a team name.")
+                AlertDialog("Please enter a team name.")
             // check that team name is not in database
             } else if (matchTeam != undefined) {
-                window.alert("This team name already exists, please create a new one.")
+                AlertDialog("This team name already exists, please create a new one.")
             // if checks passed, add to database
             } else {
                 const teamData = {
