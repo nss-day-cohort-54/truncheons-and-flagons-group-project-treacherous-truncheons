@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import { start, stop } from "../../confetti.js";
-=======
 import { AlertDialog } from "../AlertDialog.js";
->>>>>>> main
 import { applicationState } from "../dataAccess.js";
 import { sendScore, setScore } from "../score/ScoreProvider.js";
 import { getTeams } from "../team/TeamProvider.js";
@@ -104,6 +101,8 @@ export const addAllRoundScores = (scoreArray) => {
 
                     AlertDialog(`Team "${winningTeam.teamName}" has won with ${winners[0].gameScore} points!`, true)
                 }
+                start()
+                stop()
             })            
     }
 }
