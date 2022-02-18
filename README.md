@@ -42,10 +42,9 @@ The leaderboard gets the score data from the API. Teams are sorted by their all-
 ---
 If you would like to test out the functionality of this site. Here is how to download and run it on your computer.
 
-1. Open the terminal of your choice. [instructions for what is a terminal]
-2. Clone this repo into the directory of your choice. [instructions for cloning a repo]
-3. In a new terminal window, navigate to the api folder.
-4. start json-server command (does this need a download?)
-5. In a second terminal window, navigate to the src folder.
-6. serve (wait but they have to have node installed?)
-7. The site should now be served on your localhost:3000 port. Open localhost:3000 in the web browser of your choice.
+1. Clone this repo.
+2. In the project directory, navigate to the api folder `cd api`.
+3. Start the json-server, run `json-server database.json -p 8088 -w`
+4. In a second terminal window, navigate to the src folder `cd {directory_path}/src`.
+5. In src folder, run `serve` to serve the web page. localhost:300 port is used by default.
+6. Open localhost:3000 (or other specified port) in the web browser of your choice.

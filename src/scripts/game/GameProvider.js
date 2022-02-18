@@ -43,11 +43,10 @@ export const addAllRoundScores = (scoreArray) => {
     } else {
         // iterate over the current teams
         const scoresToSend = []
-        //create game winner obj
-        let winner = {gameScore:0}
+        //create game winner array
+        let winners = []
         for (const scoreObject of scoreArray) {
-            
-            
+
             // build score object for each score in gameState
             const scoreToSend = {
                 teamId: scoreObject.teamId,
@@ -56,11 +55,21 @@ export const addAllRoundScores = (scoreArray) => {
             }
             // add proper score object to the array to send
             scoresToSend.push(scoreToSend)
-            //check gameState[scoreObject.teamId] for highest score
-            // if > winner.score replace obj
-            if (scoreToSend.gameScore > winner.gameScore) {
-                winner = scoreToSend
-
+            // check scoreObject for highest score
+            // check if winners array has any winners in it
+            if (!winners.length) {
+                // if nothing in array, add the scoreObject as a winner
+                winners.push(scoreToSend)
+            } else if (scoreToSend.gameScore > winners[0].gameScore) {
+                // if current score is greater than the current winner score
+                // clear winners array
+                winners = []
+                // add score to winners
+                winners.push(scoreToSend)
+            } else if (scoreToSend.gameScore === winners[0].gameScore) {
+                // if current score equals current winner score
+                // add scoreObject to array
+                winners.push(scoreToSend)
             }
         }
         // send all scores to the api via sendScore
@@ -68,10 +77,29 @@ export const addAllRoundScores = (scoreArray) => {
         Promise.all(scoresToSend.map(scoreObject => sendScore(scoreObject)))
             //window alert to show user which team won the game
             .then(() => {
+                // get teams for finding team names
                 const teams = getTeams()
-                const winningTeam = teams.find(team => team.id === winner.teamId)
+                // check if more than one winner - means it's a tie
+                if (winners.length > 1) {
+                    // initialize tie string
+                    let tieString = "It is a tie between: \n"
+                    // iterate over winners
+                    for (const winner of winners) {
+                        // find team name of each winner
+                        const winningTeam = teams.find(team => team.id === winner.teamId)
+                        // add to string
+                        tieString += `    - ${winningTeam.teamName}\n`
+                    }
+                    // end string with points value
+                    tieString += `... with ${winners[0].gameScore} points!`
+                    // window alert of tie string
+                    window.alert(tieString)
+                } else if (winners.length === 1) {
+                    const winningTeam = teams.find(team => team.id === winners[0].teamId)
 
-                window.alert(`${winningTeam.teamName} has won with ${winner.gameScore} points!`)})
+                    window.alert(`Team "${winningTeam.teamName}" has won with ${winners[0].gameScore} points!`)
+                }
+            })
             // reset game to empty object
             .then(() => resetGameState())
             // dispatch stateChanged event to refresh page view
