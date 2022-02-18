@@ -592,16 +592,40 @@
       "id": 83
     },
     {
-      "teamId": 2,
+      "teamId": 8,
       "gameScore": 0,
-      "timestamp": 1645214175144,
+      "timestamp": 1645214283576,
       "id": 84
+    },
+    {
+      "teamId": 3,
+      "gameScore": 0,
+      "timestamp": 1645214283576,
+      "id": 85
     },
     {
       "teamId": 1,
       "gameScore": 0,
-      "timestamp": 1645214175144,
-      "id": 85
+      "timestamp": 1645214283576,
+      "id": 86
+    },
+    {
+      "teamId": 8,
+      "gameScore": 0,
+      "timestamp": 1645214777139,
+      "id": 87
+    },
+    {
+      "teamId": 2,
+      "gameScore": 0,
+      "timestamp": 1645214777139,
+      "id": 88
+    },
+    {
+      "teamId": 1,
+      "gameScore": 0,
+      "timestamp": 1645214777139,
+      "id": 89
     }
   ]
 }

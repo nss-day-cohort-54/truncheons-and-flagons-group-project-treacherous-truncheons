@@ -1,4 +1,4 @@
-import { start, stop } from "../../confetti.js";
+import { start, stop } from "../confetti.js";
 import { AlertDialog } from "../AlertDialog.js";
 import { applicationState } from "../dataAccess.js";
 import { sendScore, setScore } from "../score/ScoreProvider.js";
