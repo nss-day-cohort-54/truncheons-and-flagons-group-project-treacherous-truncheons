@@ -38,10 +38,10 @@ The leaderboard gets the score data from the API. Teams are sorted by their all-
 <br><br>
 
 ## How to use this repo
-If you would like to test out the functionality of this site. Here is how to download and run it on your computer.
+If you would like to test out the functionality of this site, here is how to download and run it on your computer.
 
 1. Clone this repo.
-2. In the project directory, navigate to the api folder `cd api`.
+2. In the project directory on your computer, navigate to the api folder `cd api`.
 3. Start the json-server, run `json-server database.json -p 8088 -w`
 4. In a second terminal window, navigate to the src folder `cd {directory_path}/src`.
 5. In src folder, run `serve` to serve the web page. localhost:300 port is used by default.
