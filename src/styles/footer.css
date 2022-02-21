@@ -1,0 +1,7 @@
+#page {
+    position: relative;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
